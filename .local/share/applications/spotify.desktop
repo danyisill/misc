@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Spotify (Firefox)
+Icon=spotify
+Exec=/bin/firefox-developer-edition --name=spotify --no-remote -P "spotify" https://open.spotify.com
+Terminal=false

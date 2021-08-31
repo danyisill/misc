@@ -1,0 +1,18 @@
+{
+	"show_legacy_color_schemes": true,
+	"color_scheme": "Packages/Color Scheme - Legacy/Mac Classic.tmTheme",
+	"font_options": [],
+	"font_face": "SF Mono",
+	"font_size": 10,
+	"tab_size": 8,
+	"caret_style": "blink",
+	"caret_extra_top": 2,
+	"caret_extra_bottom": 2,
+	"caret_extra_width": 1,
+	//"hardware_acceleration": "opengl",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"theme": "Adaptive.sublime-theme",
+}

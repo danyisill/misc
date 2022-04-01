@@ -1,4 +1,5 @@
 zmodload zsh/complist
+. ~/.env
 . ~/.config/async.zsh
 async_init
 
@@ -20,7 +21,7 @@ setopt auto_list
 setopt auto_menu
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd beep
@@ -62,8 +63,8 @@ highp(){
 }
 export VISUAL="nano"
 export EDITOR="$VISUAL"
-export PATH="/home/danny/.bin:$PATH"
-PS1='%# '
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
+PS1='%n@%M %# '
 function set-title-precmd() {
   printf "\e]2;%s\a" "${PWD/#$HOME/~}"
 }
@@ -71,10 +72,15 @@ function set-title-precmd() {
 function set-title-preexec() {
   printf "\e]2;%s\a" "$1"
 }
-
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd set-title-precmd
-add-zsh-hook preexec set-title-preexec
+if test -n "$KITTY_INSTALLATION_DIR"; then
+    export KITTY_SHELL_INTEGRATION="no-cursor"
+    autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+    kitty-integration
+    unfunction kitty-integration
+fi
+#autoload -Uz add-zsh-hook
+#add-zsh-hook precmd set-title-precmd
+#add-zsh-hook preexec set-title-preexec
 
 function iplot {
     cat <<EOF | gnuplot
@@ -87,5 +93,3 @@ function iplot {
     set output '/dev/null'
 EOF
 }
-
-cd ~

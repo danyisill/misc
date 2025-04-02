@@ -1,0 +1,66 @@
+[window]
+padding = {x = 9, y = 9}
+[cursor]
+style = {shape = "Block", blinking = "Always"}
+blink_timeout = 0
+blink_interval = 500
+
+[font]
+size = 9.0
+
+[font.bold]
+family = "MonacoTTF"
+style = "Bold"
+
+[font.bold_italic]
+family = "MonacoTTF"
+style = "Bold Italic"
+
+[font.italic]
+family = "MonacoTTF"
+style = "Italic"
+
+[font.normal]
+family = "MonacoTTF"
+style = "Regular"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control"
+mode = "~Vi"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control"
+mode = "~Vi"
+action = "CopyDynamic"
+
+# Colors (acme)
+
+# Default colors
+[colors.primary]
+background =  '#ffffea'
+foreground =  '#000000'
+
+# Normal colors
+[colors.normal]
+black   = '#101010'
+red     = '#af5f00'
+green   = '#CB9000'
+yellow  = '#CB9000'
+blue    = '#CB9000'
+magenta = '#505050'
+cyan    = '#CB9000'
+white   = '#fcfcce'
+
+# Bright colors
+[colors.bright]
+black   = '#101010'
+red     = '#af5f00'
+green   = '#CB9000'
+yellow  = '#CB9000'
+blue    = '#aeeeee'
+magenta = '#505050'
+cyan    = '#CB9000'
+white   = '#fcfcce'

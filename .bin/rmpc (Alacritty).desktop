@@ -1,0 +1,10 @@
+[Desktop Entry]
+
+Type=Application
+
+Version=1.0
+
+Name=rmpc (Alacritty)
+
+# The executable of the application, possibly with arguments.
+Exec=/bin/alacritty -T "rmpc (Alacritty)" --class rmpc -e rmpc
